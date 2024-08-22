@@ -4,47 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="styles/style.css">
     <script src="js/funciones.js"></script>
 </head>
 <body>
     <header>
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html"><img src="" alt="logo alura Latam"></a>
-        </nav>
+         <img src="assets/Logo.png" alt="logo de alura" class="logo">
     </header>
     <main class="presentacion">
         <section class="presentacion__contenido1">
 
-            <div class="presentacion__textarea">
-                <!-- <input  type="text" name="txt1" id="txt1" placeholder="Ingrese el texto aqui"> -->
-                <textarea name="txt1" id="txt1"></textarea>
-            </div>
+            <textarea class="text-area" name="txt1" id="txt1" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             
-            <div class="presentacion__botones">
-                <p class="presentacion__botones_subtitulo">Solo letras minúsculas y sin acentos</p>
-                
-                <button class="presentacion__botones__encriptar" onclick="encriptar();">
+
+            <div>
+                <h6 class="presentacion__botones_subtitulo">Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="encriptar();">
                     Encriptar!
                 </button>
-                <button class="presentacion__botones__desencriptar" onclick="desencriptar();">
+                <button class="btn-desencriptar" onclick="desencriptar();">
                     Desencriptar!
                 </button>
             </div>
-            
+        </section>
+        <section>
+    
+            <textarea class="mensaje" cols="20" rows="10" name="txt2" id="txt2"></textarea>
+          
+            <div>
+                
+                <button class="copiar">
+                    Copiar
+                </button>
+                
+            </div>
         </section>
        
-        <div class="presentacion__contenido2">
-
-            <!-- <input type="text" name="txt2" id="txt2"> -->
-            <textarea  name="txt2" id="txt2"></textarea>
-        </div>
-        <div class="presentacion__botones">
-            
-            <button class="presentacion__botones__copiar">
-                Copiar
-            </button>
-            
-        </div>
         
     </main>
     <footer class="footer">
