@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
+    <title>Encriptador de texto</title>
+    <script src="js/funciones.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html"><img src="" alt="logo alura Latam"></a>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__contenido1">
+
+            <div class="presentacion__textarea">
+                <!-- <input  type="text" name="txt1" id="txt1" placeholder="Ingrese el texto aqui"> -->
+                <textarea name="txt1" id="txt1"></textarea>
+            </div>
+            
+            <div class="presentacion__botones">
+                <p class="presentacion__botones_subtitulo">Solo letras minúsculas y sin acentos</p>
+                
+                <button class="presentacion__botones__encriptar" onclick="encriptar();">
+                    Encriptar!
+                </button>
+                <button class="presentacion__botones__desencriptar" onclick="desencriptar();">
+                    Desencriptar!
+                </button>
+            </div>
+            
+        </section>
+       
+        <div class="presentacion__contenido2">
+
+            <!-- <input type="text" name="txt2" id="txt2"> -->
+            <textarea  name="txt2" id="txt2"></textarea>
+        </div>
+        <div class="presentacion__botones">
+            
+            <button class="presentacion__botones__copiar">
+                Copiar
+            </button>
+            
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por DivSoftware</p>
+    </footer>
 </body>
 </html>
