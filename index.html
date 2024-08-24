@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/funciones.js"></script>
+     
 </head>
 <body>
     <header>
-         <img src="assets/Logo.png" alt="logo de alura" class="logo">
+         <img src="assets/Frame 6.png" alt="logo de alura" class="logo">
     </header>
     <main class="presentacion">
-        <section class="presentacion__contenido1">
+        <section class="presentacion__contenido">
 
             <textarea class="textArea" name="txt1" id="txt1" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             
-
             <div>
                 <h6 class="informacion">
-                    Solo letras minúsculas y sin acentos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.0em" height="1.0em" viewBox="0 0 20 20"><path fill="currentColor" 
+                        d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M9 5v6h2V5zm0 8v2h2v-2z"/></svg>
+                     Solo letras minúsculas y sin acentos
                 </h6> 
             </div>
 
-            <div class="botones">
-                <button class="btnEncriptar" onclick="encriptar();">
+            <div class="presentacion__botones">
+                <button class="presentacion__botones__btnEncriptar" onclick="btnEncriptar();">
                     Encriptar!
                 </button>
-                <button class="btnDesencriptar" onclick="desencriptar();">
+                <button class="presentacion__botones__btnDesencriptar" onclick="btnDesencriptar();">
                     Desencriptar!
                 </button>
             </div>
         </section>
-        <section>
-    
-            <textarea class="mensaje" cols="20" rows="10" name="txt2" id="txt2"></textarea>
-          
+        <section class="presentacion__contenido2">
+            <div class="presentacion__contenido2_mensaje" >
+                <textarea class="mensaje" cols="20" rows="10" name="txt2" id="txt2"></textarea>
+            
+            
+            </div>
+            
+            
             <div>
                 
                 <button class="btnCopiar">
@@ -47,8 +52,10 @@
        
         
     </main>
+    
     <footer class="footer">
         <p>Desarrollado por DivSoftware</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
