@@ -1,58 +1,86 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
+});
+
+// definiendp variables con los clases y ids del html y expresiones regulares
+const txtdelusuario = document.getElementById('txt1');
+const mensaje = document.getElementById("txt2");
+const textArea = document.querySelector(".mensaje"); 
+const muñeco = document.querySelector(".muñecoPng");
+const miniinfo = document.querySelector(".informacion");
+// Expresión regular para validar la entrada ya que permite solo letras 
+// sin acentos, números y espacios
+const regex = /[^a-zA-Z0-9\s]/g;
+
+
+const spam = document.querySelector(".Alerta");
+
+function btnEncriptar(){
+
+    const textEncriptado = Encriptar(txtdelusuario.value.replace(regex, ""));
+    
+    mensaje.value = textEncriptado;
+    txtdelusuario.value = "";
+    
+    
+    muñeco.style.display = "none";
+    spam.style.display = "none";
+    miniinfo.style.display = "block";
+}
+function btnDesencriptar(){
+    const textDesencriptado = Desencriptar(txtdelusuario.value.replace(regex, ""));
+    mensaje.value = textDesencriptado;
+    txtdelusuario.value = "";
+    
+    muñeco.style.display = "none";
+    spam.style.display = "none";
+    miniinfo.style.display = "block";
+}
 //funciones encriptar y descencriptar
+function Encriptar(stringEncriptado){
+     
 
-function encriptar(){
-    let txtdelusuario = document.getElementById('txt1').value;
+    let matrizVocales = [["e","enter"],
+    ["i","imes"],
+    ["a","ai"],
+    ["o","ober"],
+    ["u","ufat"]];
+stringEncriptado = stringEncriptado.toLowerCase();
+for(let i = 0; i<matrizVocales.length; i++) {
+if(stringEncriptado.includes(matrizVocales[i][0])) {}
+stringEncriptado = stringEncriptado.replaceAll(matrizVocales[i][0], matrizVocales[i][1]);
+}
 
-    // Aquí use split() que  la cadena se divide en un array donde cada elemento 
-    // es un carácter individual de la cadena original.
-    vocales = txtdelusuario.split("");
+let muñeco = document.querySelector(".muñecoPng");
+let textArea = document.querySelector(".mensaje");
+let spam = document.querySelector(".informacion");
+spam.style.display = "none";
+muñeco.style.display = "none";
+textArea.style.display = "block";
+
+return stringEncriptado;
+
+}
+function Desencriptar(stringDesencriptado){
     
-    
-    reemp="";
-
-    for (let i = 0; i < vocales.length; i++){
-        
-        if (vocales[i] == "a"){
-            vocales[i]= vocales[i].replace("a","ai");
-        }else if(vocales[i]== "e"){
-            vocales[i]= vocales[i].replace("e","enter");
-        }else if(vocales[i]== "i"){
-            vocales[i] = vocales[i].replace("i","imes");
-        }else if(vocales[i]=="o"){
-            vocales[i]= vocales[i].replace("o","ober");
-        }else if(vocales[i]== "u"){
-            vocales[i] = vocales[i].replace("u","ufat");
-        }
-       
-        reemp += vocales[i];
-        // let encriptados = new Array(vocales[i])
-        // let txt = encriptados.join("");
-        
-        
-        
+   
+    let matrizVocales = [["e","enter"],
+    ["i","imes"],
+    ["a","ai"],
+    ["o","ober"],
+    ["u","ufat"]];
+    stringDesencriptado = stringDesencriptado.toLowerCase();
+    for(let i = 0; i<matrizVocales.length; i++) {
+    if(stringDesencriptado.includes(matrizVocales[i][1])) {}
+    stringDesencriptado = stringDesencriptado.replaceAll(matrizVocales[i][1], matrizVocales[i][0]);
     }
-    
-    console.log(reemp);
-    document.getElementById("txt2").value = reemp;
-}
-function desencriptar(){
-    let txtdelusuario = document.getElementById('txt1').value;
-   
-    // En esta parte investigue sobre las expresiones regulares y aisle los textos a 
-    // remmplazar -> (/enter/g) y asi susesivamente para las demas donde la g indica 
-    // que es global, es decir, reemplazará todas las apariciones de la cadena "enter" 
-    // en el texto, no solo la primera. Como use arriba use el  replace() a cada 
-    // llamada toma el resultado del reemplazo anterior y aplica el siguiente.
+    let muñeco = document.querySelector(".muñecoPng");
+    let textArea = document.querySelector(".mensaje");
+    let spam = document.querySelector(".informacion");
+    spam.style.display = "none";
+    muñeco.style.display = "none";
+    textArea.style.display = "block";
 
-    txtdelusuario = txtdelusuario
-    .replace(/ai/g, "a")
-    .replace(/enter/g, "e")
-    .replace(/imes/g, "i")
-    .replace(/ober/g, "o")
-    .replace(/ufat/g, "u");
-   
-    
-    console.log(txtdelusuario);
-    
-    document.getElementById("txt2").value = txtdelusuario;
+    return stringDesencriptado;
 }
+// spam.style.display = "none";
