@@ -8,22 +8,17 @@
     --color-secundario: #495057;
 
 
-    /* --color-terciario: #A2CA71;
-    --color-hover: #F6E96B; */
+
 
     --fuente-inter: "Inter", sans-serif;
-    /* --fuente-krona: 'Krona One', sans-serif; */
+   
 }
 *{
 /* color de la pagina y reseteo del padding y margin en 0 para q no haya conflicto entre navegadores
     y algunos estilos mas... */
     
     font-family: "Inter", sans-serif; 
-    /* font-style: normal;
-    font-weight: 400;
-    
-    line-height: 150%;
-    overflow-y: hidden; */
+   
 
  
 
@@ -38,30 +33,14 @@ body{
     background: var(--color-fondo); 
 }
 
-/* header */
-header{
-
-}
-.header__contenido{
-    /* padding-top: 40px;
-    margin-left: 40px;
-    width: 90%;
-    margin: auto; */
-}
 .header__logo{
     margin-top: 40px;
-    /* margin-left: 40px; */
+   
 }
 
 /* main */
 .presentacion{
-    /* display: flex;
-    margin-bottom: 10px;
-    margin-left: 240px; */
-
-
-    /* align-items: center; */
-    /* justify-content: space-between; */
+   
     
     width: 85%;
     margin: auto 40px auto auto;
@@ -80,9 +59,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
 }
-.footer__textArea{
 
-}
 
 .presentacion__botones{
     
@@ -171,10 +148,10 @@ header{
 .Alerta{
     text-align: center; 
     h4 {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
     p{
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 
@@ -192,21 +169,21 @@ header{
     resize: none;
 }
 
-/* .footer{
-    background-color: purple;
-    height: 40px;
-} */
+.footer{
+   
+   
+    text-align: center;
+    padding-top: 1rem;
+    height: 100%;
+   
+    p{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
 
 .textArea{
-    /* height: 606px;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    border: none;
-    color: #0A3871;
-    margin-top: 30px;
-    padding: 2px;
-    background: #F3F5FC;
-    text-transform: lowercase; */
+    
     height: 70%;
     width: 80%;
     font-size: 32px;
@@ -223,65 +200,7 @@ header{
     font-size: 32px;
 }
     
-.textArea:focus {
-    /* outline: none; */
-}
 
-
-.presentacion__contenido2{
-    /* width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center; */
-}
-.presentacion__contenido2_mensaje{
-    /* width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center; */
-}
-.mensaje {
-    /* width: 400px;
-    height: 750px;
-    background: white;
-    background-image: url("/assets/Muñeco.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 150px 150px;
-    
-    border: none;
-    border-radius: 32px;
-    color: #0A3871;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-top: 200px; 
-    padding-left: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    resize: none;  */
-}
-.mensaje::before {
-    /* content: "Ningún mensaje fue encontrado";
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #0A3871;
-    font-size: 1.2em; */
-}
-
-.mensaje::after {
-    /* content: "Ingresa el texto que desees encriptar o desencriptar";
-    display: block;
-    text-align: center;
-    color: #0A3871;
-    font-size: 1em; */
-}
-.mensaje:focus{
-    /* outline: none; */
-}
 
 
 
